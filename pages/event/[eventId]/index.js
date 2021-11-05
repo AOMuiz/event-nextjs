@@ -9,10 +9,19 @@ const EventDetails = ({ eventById }) => {
         <button>Go Back</button>
       </Link> */}
       <EventDetail
-        image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/2017_0423_Ravenna_%28132%29.jpg/1024px-2017_0423_Ravenna_%28132%29.jpg"
+        image={
+          eventById.photoUrl === null
+            ? "https://images.unsplash.com/photo-1519750157634-b6d493a0f77c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGV2ZW50fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60"
+            : `https://dev.peddlesoft.com${eventById?.photoUrl}`
+        }
         name={eventById.name}
         venue={eventById.venue}
         about={eventById.org.about}
+        startDate={eventById.startDate}
+        endDate={eventById.endDate}
+        startTime={eventById.startTime}
+        endTime={eventById.endTime}
+        theme={eventById.theme}
       />
     </>
   );
@@ -28,7 +37,7 @@ export const getServerSideProps = async (context) => {
   const { data } = await client.query({
     query: gql`
       query EventById {
-        eventById(id: 1) {
+        eventById(id: 2) {
           id
           uuid
           name
@@ -51,6 +60,7 @@ export const getServerSideProps = async (context) => {
           code
           org {
             about
+            slug
           }
         }
       }

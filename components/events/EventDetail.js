@@ -3,25 +3,27 @@ import React from "react";
 const EventDetail = (props) => {
   return (
     <>
-      <section className="flex w-11/12 justify-center items-center border shadow-md">
+      <section className="flex w-full md:w-11/12 justify-center items-center border shadow-md">
         <div className="w-full">
           <img src={props.image} alt={props.name} className="mb-2 w-full" />
           <div className="p-6">
             <h1 className="font-bold text-lg px-3 text-center">{props.name}</h1>
-            <address>{props.venue}</address>
+            <address>Theme: {props.theme}</address>
             <p className="text-justify ">{props.about}</p>
-            <div className="flex  py-4 justify-between">
+            <div className="flex flex-col py-4 justify-between">
               <div className="">
                 <p className="text-lg text-gray-800 py-2">
                   <span>Start Date: </span>
-                  2021-11-01
+                  {props.startDate}
                 </p>
                 <p className="text-lg text-gray-800 py-2">
-                  <span>End Date: </span>2021-11-02
+                  <span>End Date: </span>
+                  {props.startDate}
                 </p>
               </div>
               <p className="text-lg text-gray-800 px-2">
-                <span>Venue: </span>Abuja
+                <span>Venue: </span>
+                {props.venue}
               </p>
             </div>
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start ">
@@ -40,7 +42,7 @@ const EventDetail = (props) => {
             ABOUT
           </h2>
           <p className="mt-2 text-xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-xl">
-            Samantha Graves Event
+            {props.name}
           </p>
         </div>
         <div className="mt-10">
@@ -51,17 +53,10 @@ const EventDetail = (props) => {
                   <img
                     alt=""
                     aria-hidden="true"
-                    className="max-w-full block border-2 px-0"
-                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+                    className="w-full block px-0"
+                    src={props.image}
                   />
                 </div>
-                <img
-                  src="/_next/image?url=http%3A%2F%2Fdev.peddlesoft.com%2Fmedia%2Fevents%2FScreen_Shot_2021-10-25_at_6.05.10_PM.png&amp;w=1920&amp;q=75"
-                  decoding="async"
-                  data-nimg="true"
-                  className="object-contain absolute border-none min-w-full max-w-full min-h-full max-h-full m-auto"
-                  srcSet="/_next/image?url=http%3A%2F%2Fdev.peddlesoft.com%2Fmedia%2Fevents%2FScreen_Shot_2021-10-25_at_6.05.10_PM.png&amp;w=828&amp;q=75 1x, /_next/image?url=http%3A%2F%2Fdev.peddlesoft.com%2Fmedia%2Fevents%2FScreen_Shot_2021-10-25_at_6.05.10_PM.png&amp;w=1920&amp;q=75 2x"
-                />
               </div>
             </div>
             <div className="relative my-4">
@@ -73,26 +68,26 @@ const EventDetail = (props) => {
               <dd className="mt-2 text-base py-2 text-center text-gray-500">
                 <p>Registration fees</p>
               </dd>
-              <div className="lg:w-3/3 w-full  overflow-auto my-2">
+              <div className="lg:w-3/3 w-full overflow-auto my-2">
                 <table className="table-auto w-full text-left whitespace-no-wrap">
                   <thead>
                     <tr>
-                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
+                      <th className="px-3 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">
                         <b>Membership Category</b>
                       </th>
-                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                      <th className="px-3 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
                         <b>Early-bird</b>
                       </th>
-                      <th className="px-4 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
-                        <b>After Nov, 12. 2021</b>
+                      <th className="px-3 py-3 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">
+                        <b>After {props.endDate}</b>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td className="px-4 py-3">Student</td>
-                      <td className="px-4 py-3">NGN1,900.00</td>
-                      <td className="px-4 py-3">EEK4,900.00</td>
+                      <td className="px-3 py-3">Student</td>
+                      <td className="px-3 py-3">NGN1,900.00</td>
+                      <td className="px-3 py-3">EEK4,900.00</td>
                     </tr>
                   </tbody>
                 </table>
@@ -122,7 +117,7 @@ const EventDetail = (props) => {
               </div>
               <div className="flex-grow">
                 <h3 className="text-white text-lg title-font font-medium mb-3">
-                  Dolores omnis totam
+                  {props.venue}
                 </h3>
               </div>
             </div>
@@ -146,7 +141,8 @@ const EventDetail = (props) => {
               </div>
               <div className="flex-grow">
                 <h3 className="text-white text-lg title-font font-medium mb-3">
-                  Nov, 06. 2021 - Nov, 12. 2021 <br /> 12 PM - 12 PM
+                  {props.startDate} - {props.endDate} <br /> {props.startTime} -{" "}
+                  {props.endTime}
                 </h3>
               </div>
             </div>
