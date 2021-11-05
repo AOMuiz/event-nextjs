@@ -3,7 +3,7 @@
 ## Preview
 
 <span>
-<img src="./docs/assets/hero.png" alt="preview"  width="500" />
+<img src="./docs/assets/Hero.png" alt="preview"  width="500" />
 <img src="./docs/assets/eventlisting.png" alt="preview"  width="500" />
 <img src="./docs/assets/404.png" alt="preview"  width="500" />
 </span>
