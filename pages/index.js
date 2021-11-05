@@ -2,19 +2,11 @@ import Head from "next/head";
 import { ApolloClient, InMemoryCache, gql, useQuery } from "@apollo/client";
 import { useState } from "react";
 import EventList from "../components/events/EventList";
+import Hero from "../components/layout/Hero";
 
 export default function Home({ events }) {
   const initialState = events;
   const [event, setEvent] = useState(initialState);
-  // const { loading, error, data } = useQuery(GET_MY_TODOS);
-
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-  // if (error) {
-  //   console.error(error);
-  //   return <div>Error!</div>;
-  // }
   console.log("events", events);
 
   return (
@@ -23,14 +15,7 @@ export default function Home({ events }) {
         <title>PeddleSoft Events</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <h1 className="text-6xl font-bold">
-        Welcome to
-        <a className="text-blue-600" href="https://nextjs.org">
-          Eventy
-        </a>
-      </h1>
-
+      <Hero />
       <EventList events={events} />
     </div>
   );
