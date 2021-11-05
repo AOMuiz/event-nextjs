@@ -29,13 +29,9 @@ Start Development Mode :
 
 > Build a Event Listing Website Using PeddleSoft Graphql API
 
-> List all events .
+> List all events.
 
-> Filter table based on the selected gender.
-
-> Sort the table by clicking on the header in ascending or descending order.
-
-> Show the sum of the character and the total heights in cm(ft/in)
+> Each event with an Event Details Page
 
 ## Technologies Used
 
@@ -45,7 +41,7 @@ Start Development Mode :
 
 3. Used `Error Boundary` npm package for handling errors.
 
-4. Used `Apollo GraphQl` for data fecthing.
+4. Used `Graphql & Apollo GraphQl` for data fecthing.
 
 5. Created `Custom Hooks` for handling fetched data and rendering.
 
