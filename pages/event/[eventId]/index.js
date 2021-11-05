@@ -5,7 +5,9 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 const EventDetails = ({ eventById }) => {
   return (
     <>
-      <Link href="/">Go Back</Link>
+      {/* <Link href="/">
+        <button>Go Back</button>
+      </Link> */}
       <EventDetail
         image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/2017_0423_Ravenna_%28132%29.jpg/1024px-2017_0423_Ravenna_%28132%29.jpg"
         name={eventById.name}
