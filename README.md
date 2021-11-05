@@ -11,7 +11,7 @@
 <hr />
 
 Clone this repo :
-`git clone https://github.com/AOMuiz/starwars`
+`git clone https://github.com/AOMuiz/next-event`
 
 Navigate to the root folder and install all dependencies :
 
