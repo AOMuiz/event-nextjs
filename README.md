@@ -1,8 +1,51 @@
-# Next.js + Tailwind CSS Example
+# Next.js + Tailwind CSS + GraphQl Event listing Website
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<span>
+<img src="./docs/assets/hero.png" alt="preview"  width="270" />
+<img src="./docs/assets/eventlisting.png" alt="preview"  width="270" />
+<img src="./docs/assets/404.png" alt="preview"  width="270" />
+</span>
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+<hr />
+
+Clone this repo :
+`git clone https://github.com/AOMuiz/starwars`
+
+Navigate to the root folder and install all dependencies :
+
+- `yarn` or `npm install`
+
+Start Development Mode :
+
+- `yarn start` or `npm start`
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Happy Hacking!
+
+## A brief description of the project
+
+### Task
+
+> Build a Event Listing Website Using PeddleSoft Graphql API
+
+> List all events .
+
+> Filter table based on the selected gender.
+
+> Sort the table by clicking on the header in ascending or descending order.
+
+> Show the sum of the character and the total heights in cm(ft/in)
+
+## Technologies Used
+
+1. Used `Next Js` for building the website.
+
+2. Implemented website styling using `Tailwind CSS`.
+
+3. Used `Error Boundary` npm package for handling errors.
+
+4. Used `Apollo GraphQl` for data fecthing.
+
+5. Created `Custom Hooks` for handling fetched data and rendering.
 
 ## Preview
 

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ApolloClient, InMemoryCache, gql, useQuery } from "@apollo/client";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import { useState } from "react";
 import EventList from "../components/events/EventList";
 import Hero from "../components/layout/Hero";
@@ -16,6 +16,10 @@ export default function Home({ events }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <div></div>
+      <h2 className="text-center font-bold capitalize text-lg">
+        All Event Listings
+      </h2>
       <EventList events={events} />
     </div>
   );
@@ -36,21 +40,9 @@ export async function getStaticProps() {
           name
           venue
           photoUrl
-          minutesUrl
-          eventState
           startDate
           endDate
-          startTime
-          endTime
-          minutes
-          externalDomain
-          paid
-          theme
-          onlineMeetingLink
-          venue
           flyer
-          photoUrl
-          code
           org {
             about
           }
