@@ -1,17 +1,19 @@
-import classes from "./MainNavigation.module.css";
 import Link from "next/link";
 
 function MainNavigation() {
   return (
     <header className="py-2 px-2 shadow-md">
       <div className="flex items-center justify-between">
-        <div className="flex items-center justify-center">
-          <div className="flex items-center justify-center text-3xl font-bold text-true-gray-800">
+        <div className="flex hover:cursor-pointer items-center justify-center">
+          <Link
+            href="/"
+            className="flex items-center justify-center text-3xl font-bold text-true-gray-800"
+          >
             <img
               src="https://peddlesoft.com/static/frontend/imgs/small_logo.png"
               alt=""
             />
-          </div>
+          </Link>
           <div className="hidden lg:flex items-center justify-center antialiased lg:ml-20 pt-1">
             <a
               href="#"

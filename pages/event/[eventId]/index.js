@@ -1,5 +1,4 @@
 import EventDetail from "../../../components/events/EventDetail";
-import Link from "next/link";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 const EventDetails = ({ eventById }) => {
@@ -27,7 +26,7 @@ const EventDetails = ({ eventById }) => {
   );
 };
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   let id = context.params.id;
   const client = new ApolloClient({
     uri: "https://dev.peddlesoft.com/graphql",
