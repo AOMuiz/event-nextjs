@@ -104,8 +104,8 @@ const EventDetail = (props) => {
         {/* DETAILS PRICE SECTION */}
         <section className="w-full my-4">
           <div className="flex flex-wrap py-10 sm:-m-4 md:space-y-0 theme-color-block items-center justify-center bg-green-600">
-            <div className="p-4 md:w-1/4 w-1/2 flex flex-col text-center items-center">
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-white theme-color-text mb-5 flex-shrink-0">
+            <div className="p-4 lg:w-1/4 md:w-1/2 w-full flex flex-col text-center items-center">
+              <div className="w-20 h-20 flex items-center justify-center rounded-full bg-white theme-color-text mb-5 flex-shrink-0 flex-grow">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -128,7 +128,7 @@ const EventDetail = (props) => {
                 </h3>
               </div>
             </div>
-            <div className="p-4 md:w-1/4 flex flex-col text-center items-center">
+            <div className="p-4 lg:w-1/4 md:w-1/2 w-full flex flex-col text-center items-center">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-white theme-color-text mb-5 flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -148,12 +148,12 @@ const EventDetail = (props) => {
               </div>
               <div className="flex-grow">
                 <h3 className="text-white text-lg title-font font-medium mb-3">
-                  {props.startDate} - {props.endDate} <br /> {props.startTime} -{" "}
-                  {props.endTime}
+                  {props.startDate} - {props.endDate} <br />
+                  {props.startTime} - {props.endTime}
                 </h3>
               </div>
             </div>
-            <div className="p-4 md:w-1/4 flex flex-col text-center items-center">
+            <div className="p-4 lg:w-1/4 md:w-1/2 w-full flex flex-col text-center items-center">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-white theme-color-text mb-5 flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ const EventDetail = (props) => {
                 </h3>
               </div>
             </div>
-            <div className="p-4 md:w-1/4 flex flex-col text-center items-center">
+            <div className="p-4 lg:w-1/4 md:w-1/2 w-full flex flex-col text-center items-center">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-white theme-color-text mb-5 flex-shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -37,7 +37,7 @@ export const getServerSideProps = async (context) => {
   const { data } = await client.query({
     query: gql`
       query EventById {
-        eventById(id: 1) {
+        eventById(id: 2) {
           id
           uuid
           name
