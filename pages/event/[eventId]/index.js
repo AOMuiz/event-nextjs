@@ -21,7 +21,7 @@ const EventDetails = ({ eventById }) => {
         endDate={eventById.endDate}
         startTime={eventById.startTime}
         endTime={eventById.endTime}
-        theme={eventById.theme}
+        theme={eventById.theme ? eventById.theme : "No Theme"}
       />
     </>
   );
@@ -37,7 +37,7 @@ export const getServerSideProps = async (context) => {
   const { data } = await client.query({
     query: gql`
       query EventById {
-        eventById(id: 2) {
+        eventById(id: 1) {
           id
           uuid
           name

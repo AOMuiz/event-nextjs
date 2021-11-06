@@ -3,13 +3,18 @@ import React from "react";
 const EventDetail = (props) => {
   return (
     <>
-      <section className="flex w-full md:w-11/12 justify-center items-center border shadow-md">
+      {/* DETAILS HERO SECTION */}
+      <section className="max-w-screen-lg flex w-full md:w-11/12 justify-center items-center border shadow-md p-6">
         <div className="w-full">
-          <img src={props.image} alt={props.name} className="mb-2 w-full" />
-          <div className="p-6">
+          <img
+            src={props.image}
+            alt={props.name}
+            className="mb-2 w-full h-auto "
+          />
+          <div className="">
             <h1 className="font-bold text-lg px-3 text-center">{props.name}</h1>
             <address>Theme: {props.theme}</address>
-            <p className="text-justify ">{props.about}</p>
+            <p className="text-justify">{props.about}</p>
             <div className="flex flex-col py-4 justify-between">
               <div className="">
                 <p className="text-lg text-gray-800 py-2">
@@ -26,7 +31,7 @@ const EventDetail = (props) => {
                 {props.venue}
               </p>
             </div>
-            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start ">
+            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center ">
               <div className="rounded-md bg-green-600 hover:cursor-pointer disabled:hover:cursor-pointer shadow">
                 <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white theme-color-block hover:theme-color-block-hover md:py-4 md:text-lg md:px-10">
                   Register
@@ -36,7 +41,8 @@ const EventDetail = (props) => {
           </div>
         </div>
       </section>
-      <div className="max-w-7xl mx-auto py-4 my-3 sm:px-6 lg:px-8 bg-gray-50">
+      {/* DETAILS ABOUT SECTION */}
+      <section className="max-w-screen-lg md:w-11/12 py-4 my-3 sm:px-6 lg:px-8 bg-gray-50">
         <div className="lg:text-center">
           <h2 className="text-3xl theme-color-text font-semibold tracking-wide uppercase">
             ABOUT
@@ -62,7 +68,7 @@ const EventDetail = (props) => {
             <div className="relative my-4">
               <dt>
                 <p className="font-bold leading-6  text-green-700 text-2xl">
-                  Samantha Graves Event
+                  {props.name}
                 </p>
               </dt>
               <dd className="mt-2 text-base py-2 text-center text-gray-500">
@@ -95,7 +101,8 @@ const EventDetail = (props) => {
             </div>
           </dl>
         </div>
-        <div className="w-full my-4">
+        {/* DETAILS PRICE SECTION */}
+        <section className="w-full my-4">
           <div className="flex flex-wrap py-10 sm:-m-4 md:space-y-0 theme-color-block items-center justify-center bg-green-600">
             <div className="p-4 md:w-1/4 w-1/2 flex flex-col text-center items-center">
               <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-white theme-color-text mb-5 flex-shrink-0">
@@ -198,8 +205,8 @@ const EventDetail = (props) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </>
   );
 };
