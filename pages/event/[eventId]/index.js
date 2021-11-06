@@ -26,7 +26,7 @@ const EventDetails = ({ eventById }) => {
   );
 };
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   let id = context.params.id;
   const client = new ApolloClient({
     uri: "https://dev.peddlesoft.com/graphql",
